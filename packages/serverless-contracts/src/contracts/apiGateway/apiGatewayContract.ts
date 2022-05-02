@@ -278,6 +278,7 @@ export class ApiGatewayContract<
    * @returns the request parameters to be used on the client-side
    */
   getRequestParameters(
+    //Stan
     requestArguments: DefinedProperties<{
       pathParameters: PathParametersType;
       queryStringParameters: QueryStringParametersType;
@@ -317,6 +318,7 @@ export class ApiGatewayContract<
    * @returns a promise with the response
    */
   async axiosRequest(
+    //Stan
     axiosClient: AxiosInstance,
     requestArguments: DefinedProperties<{
       pathParameters: PathParametersType;
