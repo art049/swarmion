@@ -4,6 +4,7 @@ export {
   getAxiosRequest,
   getFetchRequest,
   getLambdaHandler,
+  getCompleteLambdaHandler,
   getRequestParameters,
 } from './features';
 export type { HandlerType } from './types';
