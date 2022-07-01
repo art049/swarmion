@@ -1,3 +1,10 @@
-import { ApiGatewayContract, CloudFormationContract } from 'contracts';
+import {
+  ApiGatewayContract,
+  CloudFormationContract,
+  EventContract,
+} from 'contracts';
 
-export type ServerlessContract = ApiGatewayContract | CloudFormationContract;
+export type ServerlessContract =
+  | ApiGatewayContract
+  | CloudFormationContract
+  | EventContract;

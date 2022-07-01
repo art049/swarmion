@@ -6,7 +6,7 @@ import { ServerlessContract } from 'index';
 
 export const getContractFullSchema = (
   contract: ServerlessContract,
-): JSONSchema => {
+): JSONSchema | undefined => {
   switch (contract.contractType) {
     case 'apiGateway': {
       // @ts-expect-error FIXME: problem with types here
@@ -14,6 +14,10 @@ export const getContractFullSchema = (
     }
     case 'cloudFormation': {
       return getCloudFormationFullContractSchema(contract);
+    }
+    case 'event': {
+      // TODO return getEventFullContractSchema
+      return;
     }
   }
 };
